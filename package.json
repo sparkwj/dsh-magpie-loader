@@ -1,7 +1,6 @@
 {
   "name": "dsh-magpie-loader",
   "version": "1.0.0",
-  "private": true,
   "type": "module",
   "description": "Starts magpie when DeepSeek Harness starts and stops it when the Harness exits.",
   "exports": {
@@ -9,6 +8,28 @@
     "./locale/*.json": "./locale/*.json",
     "./icon": "./icon.svg"
   },
-  "files": ["index.js", "cordis.patch.yml", "locale/*.json", "icon.svg"],
-  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.zh-CN.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sparkwj/dsh-magpie-loader.git"
+  },
+  "homepage": "https://github.com/sparkwj/dsh-magpie-loader#readme",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "magpie",
+    "plugin"
+  ]
 }
