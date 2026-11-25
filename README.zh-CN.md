@@ -18,7 +18,7 @@ DeepSeek Harness（DSH）插件：启动 DSH 时自动运行 magpie，退出 DSH
 dsh-magpie-loader
 ```
 
-安装完成后，magpie 会随 DSH 自动在后台运行和关闭。
+安装完成后，magpie 会随 DSH 自动在后台运行或关闭。
 
 ## 许可证
 
