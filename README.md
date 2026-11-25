@@ -20,15 +20,6 @@ dsh-magpie-loader
 
 Once installed, magpie starts and stops together with DSH.
 
-## Configuration
-
-By default the plugin runs `magpie web --no-open`. You can change this in the plugin configuration:
-
-| Field | Default | Description |
-|---|---|---|
-| `command` | `magpie` | Command to run |
-| `args` | `["web", "--no-open"]` | Command arguments |
-
 ## Notes
 
 - The plugin only stops the magpie process it started; magpie instances you opened yourself are not affected.

@@ -4,9 +4,10 @@ import { spawn } from 'node:child_process'
  * Starts magpie when the Harness activates this plugin and stops it
  * when the plugin is disposed (Harness exit, disable, or reload).
  */
-export function apply(ctx, config = {}) {
-  const command = config.command || 'magpie'
-  const args = Array.isArray(config.args) ? config.args : []
+const command = 'magpie'
+const args = ['web', '--no-open']
+
+export function apply(ctx) {
   const logger = ctx.logger ? ctx.logger('magpie-loader') : console
 
   ctx.effect(() => {

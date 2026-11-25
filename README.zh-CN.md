@@ -20,15 +20,6 @@ dsh-magpie-loader
 
 安装完成后，magpie 会随 DSH 自动启动和关闭。
 
-## 配置
-
-插件默认运行 `magpie web --no-open`。如需修改，可在插件配置中调整：
-
-| 字段 | 默认值 | 说明 |
-|---|---|---|
-| `command` | `magpie` | 要运行的命令 |
-| `args` | `["web", "--no-open"]` | 命令参数 |
-
 ## 说明
 
 - 插件只会关闭由它启动的 magpie 进程，你自己打开的 magpie 不受影响。

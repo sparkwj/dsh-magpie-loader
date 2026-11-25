@@ -1,8 +1,4 @@
 - insert:
     - id: magpie-loader
       name: dsh-magpie-loader
-      config:
-        command: magpie
-        args:
-          - web
-          - --no-open
+      config: {}
