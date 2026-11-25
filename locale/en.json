@@ -1,0 +1,1 @@
+{ "meta": { "title": "Magpie loader", "description": "Runs the magpie command when DeepSeek Harness starts and stops it when the Harness exits. Requires magpie on PATH." } }
