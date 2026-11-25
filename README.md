@@ -20,11 +20,6 @@ dsh-magpie-loader
 
 Once installed, magpie starts and stops together with DSH.
 
-## Notes
-
-- The plugin only stops the magpie process it started; magpie instances you opened yourself are not affected.
-- If magpie fails to start, DSH keeps working normally.
-
 ## License
 
 MIT

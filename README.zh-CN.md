@@ -20,11 +20,6 @@ dsh-magpie-loader
 
 安装完成后，magpie 会随 DSH 自动启动和关闭。
 
-## 说明
-
-- 插件只会关闭由它启动的 magpie 进程，你自己打开的 magpie 不受影响。
-- magpie 启动失败不会影响 DSH 正常使用。
-
 ## 许可证
 
 MIT
