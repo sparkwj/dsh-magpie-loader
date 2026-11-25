@@ -1,6 +1,6 @@
 - insert:
     - id: magpie-loader
-      name: '@local/dsh-magpie-loader'
+      name: dsh-magpie-loader
       config:
         command: magpie
         args:

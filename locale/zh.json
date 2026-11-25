@@ -1,1 +1,1 @@
-{ "meta": { "title": "Magpie 启动器", "description": "DeepSeek Harness 启动时自动运行 magpie 命令，退出时自动关闭。需要 magpie 已加入 PATH。" } }
+{ "meta": { "title": "Magpie 启动器", "description": "DeepSeek Harness 启动时自动运行 magpie，退出时自动关闭。" } }

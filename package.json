@@ -1,9 +1,9 @@
 {
-  "name": "@local/dsh-magpie-loader",
+  "name": "dsh-magpie-loader",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Starts magpie with DeepSeek Harness and stops it on exit.",
+  "description": "Starts magpie when DeepSeek Harness starts and stops it when the Harness exits.",
   "exports": {
     ".": "./index.js",
     "./locale/*.json": "./locale/*.json",
