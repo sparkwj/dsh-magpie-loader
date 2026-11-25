@@ -18,7 +18,7 @@ In DSH, open **Plugins** > **Add plugin**, enter the following npm package name,
 dsh-magpie-loader
 ```
 
-Once installed, magpie starts and stops together with DSH.
+Once installed, magpie runs in the background with DSH and stops when DSH exits.
 
 ## License
 
