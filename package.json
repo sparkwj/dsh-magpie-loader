@@ -1,6 +1,6 @@
 {
   "name": "dsh-magpie-loader",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "module",
   "description": "Starts magpie when DeepSeek Harness starts and stops it when the Harness exits.",
   "exports": {

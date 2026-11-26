@@ -195,11 +195,23 @@ window.__ModuleLoader__.load({
           const info = useInfo()
           const [nonce, setNonce] = React.useState(0)
           const url = info && info.url
-          return h('div', { style: { height: '100%', minHeight: 0, overflow: 'hidden', boxSizing: 'border-box', padding: '24px 32px' } },
-            h('div', { style: { display: 'flex', flexDirection: 'column', gap: 12, height: '100%', minHeight: 0, maxWidth: 960, margin: '0 auto' } },
-              h('div', { style: { display: 'flex', alignItems: 'center', gap: 8, flex: '0 0 auto' } },
-                h(Button, { variant: 'ghost', size: 'sm', onClick: goBack }, '← ' + t('back')),
-                h('span', { style: { fontWeight: 600, fontSize: 16 } }, 'Magpie'),
+          // Mirror the plugin page: inline inset clamp(24px,4vw,48px), the head row's
+          // 28px top inset (+ macOS frame clearance), and the same .crumb look.
+          const darwin = !!document.querySelector('[data-platform="darwin"]')
+          const topInset = darwin ? 'calc(28px + var(--dsh-frame-top-clearance, 0px))' : '28px'
+          const chevron = h('svg', { width: 14, height: 14, viewBox: '0 0 16 16', fill: 'none', 'aria-hidden': 'true' },
+            h('path', { d: 'M10 3.5 5.5 8l4.5 4.5', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' }))
+          return h('div', { style: { height: '100%', minHeight: 0, overflow: 'hidden', boxSizing: 'border-box', padding: '0 clamp(24px, 4vw, 48px) 24px' } },
+            h('div', { style: { display: 'flex', flexDirection: 'column', height: '100%', minHeight: 0, maxWidth: 960, margin: '0 auto' } },
+              h('div', { 'data-window-drag': '', style: { display: 'flex', flex: '0 0 auto', paddingTop: topInset } },
+                h('button', {
+                  type: 'button', onClick: goBack, 'aria-label': t('back'),
+                  style: { display: 'inline-flex', alignItems: 'center', gap: 6, border: 0, padding: 0, background: 'none', font: 'inherit', fontSize: 12.5, cursor: 'pointer', color: 'var(--dsw-alias-label-tertiary)' },
+                  onMouseEnter: e => { e.currentTarget.style.color = 'var(--dsw-alias-label-primary)' },
+                  onMouseLeave: e => { e.currentTarget.style.color = 'var(--dsw-alias-label-tertiary)' },
+                }, chevron, h('span', null, t('back')))),
+              h('div', { style: { display: 'flex', alignItems: 'center', gap: 8, flex: '0 0 auto', margin: '20px 0 12px' } },
+                h('span', { style: { fontWeight: 500, fontSize: 20, lineHeight: '28px' } }, 'Magpie'),
                 info ? h(StatusTag, { info }) : null,
                 h('div', { style: { flex: 1 } }),
                 h(Button, { variant: 'ghost', size: 'sm', disabled: !url, onClick: () => setNonce(n => n + 1) }, t('reload'))),
